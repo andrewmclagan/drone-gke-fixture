@@ -5,7 +5,7 @@ metadata:
   labels:
     foo: <%= LABELS.foo %>
     bar: <%= LABELS.bar %>
-    version: <%= version %>
+    version: <%= VERSION %>
 spec:
   ports:
     - port: 80
