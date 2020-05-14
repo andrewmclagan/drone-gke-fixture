@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: <%= name %>
+  name: <%= NAME %>
 spec:
   selector:
     matchLabels:
-      foo: <%= labels.foo %>
-      bar: <%= labels.bar %>
+      foo: <%= LABELS.foo %>
+      bar: <%= LABELS.bar %>
   replicas: 1
   template:
     metadata:
       labels:
-        foo: <%= labels.foo %>
-        bar: <%= labels.bar %>
+        foo: <%= LABELS.foo %>
+        bar: <%= LABELS.bar %>
     spec:
       containers:
 
         - name: web
           imagePullPolicy: Always
-          image: "hello-world:<%= version %>"
+          image: "tutum/hello-world:<%= VERSION %>"
           ports:
             - containerPort: 80           
